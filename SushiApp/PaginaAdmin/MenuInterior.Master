@@ -16,8 +16,10 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
 
 </head>
 
@@ -52,21 +54,15 @@
                         <li>
                             <a href="#"><i class="fa fa-edit"></i><span class="nav-label">Mantenedores</span><span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level collapse">
-                                <li><a href="mantenedor_clientes.aspx">Usuarios</a></li>
+                                <li><a href="mantenedor_clientes.aspx">Clientes</a></li>
+                                <li><a href="mantendor_Administrador.aspx">Administrador</a></li>
                                 <li><a href="mantenedor_categoria.aspx">Categorias</a></li>
                                 <li><a href="mantenedor_productos.aspx">Productos</a></li>
                                 <li><a href="mantenedor_ofertas.aspx">Ofertas</a></li>
+                                <li><a href="Ofertas-Productos.aspx">Ofertas/Productos</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="css_animation.html"><i class="fa fa-magic"></i><span class="nav-label">Diseño Web</span><span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level collapse">
-                                <li><a href="#">Inicio</a></li>
-                                <li><a href="#">Categorias</a></li>
-                                <li><a href="#">Productos</a></li>
-                                <li><a href="#">Ofertas</a></li>
-                            </ul>
-                        </li>
+                
                         <li>
                             <a href="#"><i class="fa fa-pie-chart"></i><span class="nav-label">Analisis</span></a>
                         </li>
@@ -83,10 +79,7 @@
                         <div class="navbar-header">
                             <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i></a>
                             <!--<form role="search" class="navbar-form-custom" method="post" action="#"> -->
-                                <div class="form-group">
-                                    <input type="text" placeholder="Buscar algo..." class="form-control" name="top-search" id="top-search">
-                                    <%--<asp:TextBox Cssclass="form-control" ID="buscar" runat="server"></asp:TextBox>--%>
-                                </div>
+                                
                             <!--</form>-->
                         </div>
                         <ul class="nav navbar-top-links navbar-right">
@@ -101,8 +94,10 @@
                 <!-- FIN MENU DE MENU SUPERIOR -->
 
                 <!-- INICIO DE CONTENIDO -->
+               
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
+
                 <!-- FIN DE CONTENIDO -->
 
                 <!-- INICIO PIE DE PAGINA -->

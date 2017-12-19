@@ -11,6 +11,12 @@
   <message name="obtenerOfertaProductoResponse">
     <part name="parameters" element="tns:obtenerOfertaProductoResponse" />
   </message>
+  <message name="modificarOfertaProducto">
+    <part name="parameters" element="tns:modificarOfertaProducto" />
+  </message>
+  <message name="modificarOfertaProductoResponse">
+    <part name="parameters" element="tns:modificarOfertaProductoResponse" />
+  </message>
   <message name="eliminarOfertaProducto">
     <part name="parameters" element="tns:eliminarOfertaProducto" />
   </message>
@@ -29,16 +35,14 @@
   <message name="agregarOfertaProductoResponse">
     <part name="parameters" element="tns:agregarOfertaProductoResponse" />
   </message>
-  <message name="modificarOfertaProducto">
-    <part name="parameters" element="tns:modificarOfertaProducto" />
-  </message>
-  <message name="modificarOfertaProductoResponse">
-    <part name="parameters" element="tns:modificarOfertaProductoResponse" />
-  </message>
   <portType name="ServiceOfertaProducto">
     <operation name="obtenerOfertaProducto">
       <input wsam:Action="http://WebService/ServiceOfertaProducto/obtenerOfertaProductoRequest" message="tns:obtenerOfertaProducto" />
       <output wsam:Action="http://WebService/ServiceOfertaProducto/obtenerOfertaProductoResponse" message="tns:obtenerOfertaProductoResponse" />
+    </operation>
+    <operation name="modificarOfertaProducto">
+      <input wsam:Action="http://WebService/ServiceOfertaProducto/modificarOfertaProductoRequest" message="tns:modificarOfertaProducto" />
+      <output wsam:Action="http://WebService/ServiceOfertaProducto/modificarOfertaProductoResponse" message="tns:modificarOfertaProductoResponse" />
     </operation>
     <operation name="eliminarOfertaProducto">
       <input wsam:Action="http://WebService/ServiceOfertaProducto/eliminarOfertaProductoRequest" message="tns:eliminarOfertaProducto" />
@@ -52,14 +56,19 @@
       <input wsam:Action="http://WebService/ServiceOfertaProducto/agregarOfertaProductoRequest" message="tns:agregarOfertaProducto" />
       <output wsam:Action="http://WebService/ServiceOfertaProducto/agregarOfertaProductoResponse" message="tns:agregarOfertaProductoResponse" />
     </operation>
-    <operation name="modificarOfertaProducto">
-      <input wsam:Action="http://WebService/ServiceOfertaProducto/modificarOfertaProductoRequest" message="tns:modificarOfertaProducto" />
-      <output wsam:Action="http://WebService/ServiceOfertaProducto/modificarOfertaProductoResponse" message="tns:modificarOfertaProductoResponse" />
-    </operation>
   </portType>
   <binding name="ServiceOfertaProductoPortBinding" type="tns:ServiceOfertaProducto">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="obtenerOfertaProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarOfertaProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -87,15 +96,6 @@
       </output>
     </operation>
     <operation name="agregarOfertaProducto">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarOfertaProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

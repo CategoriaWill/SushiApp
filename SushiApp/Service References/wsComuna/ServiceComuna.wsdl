@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8084/SushiBackend9/ServiceComuna?xsd=1" namespace="http://WebService/" />
     </xsd:schema>
   </types>
-  <message name="obtenerComuna">
-    <part name="parameters" element="tns:obtenerComuna" />
-  </message>
-  <message name="obtenerComunaResponse">
-    <part name="parameters" element="tns:obtenerComunaResponse" />
-  </message>
   <message name="eliminarComuna">
     <part name="parameters" element="tns:eliminarComuna" />
   </message>
   <message name="eliminarComunaResponse">
     <part name="parameters" element="tns:eliminarComunaResponse" />
+  </message>
+  <message name="obtenerComuna">
+    <part name="parameters" element="tns:obtenerComuna" />
+  </message>
+  <message name="obtenerComunaResponse">
+    <part name="parameters" element="tns:obtenerComunaResponse" />
   </message>
   <message name="agregarComuna">
     <part name="parameters" element="tns:agregarComuna" />
@@ -36,13 +36,13 @@
     <part name="parameters" element="tns:buscarComunaResponse" />
   </message>
   <portType name="ServiceComuna">
-    <operation name="obtenerComuna">
-      <input wsam:Action="http://WebService/ServiceComuna/obtenerComunaRequest" message="tns:obtenerComuna" />
-      <output wsam:Action="http://WebService/ServiceComuna/obtenerComunaResponse" message="tns:obtenerComunaResponse" />
-    </operation>
     <operation name="eliminarComuna">
       <input wsam:Action="http://WebService/ServiceComuna/eliminarComunaRequest" message="tns:eliminarComuna" />
       <output wsam:Action="http://WebService/ServiceComuna/eliminarComunaResponse" message="tns:eliminarComunaResponse" />
+    </operation>
+    <operation name="obtenerComuna">
+      <input wsam:Action="http://WebService/ServiceComuna/obtenerComunaRequest" message="tns:obtenerComuna" />
+      <output wsam:Action="http://WebService/ServiceComuna/obtenerComunaResponse" message="tns:obtenerComunaResponse" />
     </operation>
     <operation name="agregarComuna">
       <input wsam:Action="http://WebService/ServiceComuna/agregarComunaRequest" message="tns:agregarComuna" />
@@ -59,7 +59,7 @@
   </portType>
   <binding name="ServiceComunaPortBinding" type="tns:ServiceComuna">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="obtenerComuna">
+    <operation name="eliminarComuna">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -68,7 +68,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarComuna">
+    <operation name="obtenerComuna">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

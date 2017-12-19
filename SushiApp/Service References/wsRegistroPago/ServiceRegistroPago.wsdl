@@ -11,6 +11,12 @@
   <message name="agregarResgistroPagoResponse">
     <part name="parameters" element="tns:agregarResgistroPagoResponse" />
   </message>
+  <message name="eliminarResgistroPago">
+    <part name="parameters" element="tns:eliminarResgistroPago" />
+  </message>
+  <message name="eliminarResgistroPagoResponse">
+    <part name="parameters" element="tns:eliminarResgistroPagoResponse" />
+  </message>
   <message name="modificarResgistroPago">
     <part name="parameters" element="tns:modificarResgistroPago" />
   </message>
@@ -23,12 +29,6 @@
   <message name="obtenerResgistroPagoResponse">
     <part name="parameters" element="tns:obtenerResgistroPagoResponse" />
   </message>
-  <message name="eliminarResgistroPago">
-    <part name="parameters" element="tns:eliminarResgistroPago" />
-  </message>
-  <message name="eliminarResgistroPagoResponse">
-    <part name="parameters" element="tns:eliminarResgistroPagoResponse" />
-  </message>
   <message name="buscarResgistroPago">
     <part name="parameters" element="tns:buscarResgistroPago" />
   </message>
@@ -40,6 +40,10 @@
       <input wsam:Action="http://WebService/ServiceRegistroPago/agregarResgistroPagoRequest" message="tns:agregarResgistroPago" />
       <output wsam:Action="http://WebService/ServiceRegistroPago/agregarResgistroPagoResponse" message="tns:agregarResgistroPagoResponse" />
     </operation>
+    <operation name="eliminarResgistroPago">
+      <input wsam:Action="http://WebService/ServiceRegistroPago/eliminarResgistroPagoRequest" message="tns:eliminarResgistroPago" />
+      <output wsam:Action="http://WebService/ServiceRegistroPago/eliminarResgistroPagoResponse" message="tns:eliminarResgistroPagoResponse" />
+    </operation>
     <operation name="modificarResgistroPago">
       <input wsam:Action="http://WebService/ServiceRegistroPago/modificarResgistroPagoRequest" message="tns:modificarResgistroPago" />
       <output wsam:Action="http://WebService/ServiceRegistroPago/modificarResgistroPagoResponse" message="tns:modificarResgistroPagoResponse" />
@@ -47,10 +51,6 @@
     <operation name="obtenerResgistroPago">
       <input wsam:Action="http://WebService/ServiceRegistroPago/obtenerResgistroPagoRequest" message="tns:obtenerResgistroPago" />
       <output wsam:Action="http://WebService/ServiceRegistroPago/obtenerResgistroPagoResponse" message="tns:obtenerResgistroPagoResponse" />
-    </operation>
-    <operation name="eliminarResgistroPago">
-      <input wsam:Action="http://WebService/ServiceRegistroPago/eliminarResgistroPagoRequest" message="tns:eliminarResgistroPago" />
-      <output wsam:Action="http://WebService/ServiceRegistroPago/eliminarResgistroPagoResponse" message="tns:eliminarResgistroPagoResponse" />
     </operation>
     <operation name="buscarResgistroPago">
       <input wsam:Action="http://WebService/ServiceRegistroPago/buscarResgistroPagoRequest" message="tns:buscarResgistroPago" />
@@ -68,6 +68,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="eliminarResgistroPago">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="modificarResgistroPago">
       <soap:operation soapAction="" />
       <input>
@@ -78,15 +87,6 @@
       </output>
     </operation>
     <operation name="obtenerResgistroPago">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarResgistroPago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

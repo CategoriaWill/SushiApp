@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8084/SushiBackend9/ServiceProvincia?xsd=1" namespace="http://WebService/" />
     </xsd:schema>
   </types>
-  <message name="buscarProvincia">
-    <part name="parameters" element="tns:buscarProvincia" />
+  <message name="obtenerProvincia">
+    <part name="parameters" element="tns:obtenerProvincia" />
   </message>
-  <message name="buscarProvinciaResponse">
-    <part name="parameters" element="tns:buscarProvinciaResponse" />
+  <message name="obtenerProvinciaResponse">
+    <part name="parameters" element="tns:obtenerProvinciaResponse" />
   </message>
   <message name="agregarProvincia">
     <part name="parameters" element="tns:agregarProvincia" />
@@ -17,11 +17,11 @@
   <message name="agregarProvinciaResponse">
     <part name="parameters" element="tns:agregarProvinciaResponse" />
   </message>
-  <message name="obtenerProvincia">
-    <part name="parameters" element="tns:obtenerProvincia" />
+  <message name="buscarProvincia">
+    <part name="parameters" element="tns:buscarProvincia" />
   </message>
-  <message name="obtenerProvinciaResponse">
-    <part name="parameters" element="tns:obtenerProvinciaResponse" />
+  <message name="buscarProvinciaResponse">
+    <part name="parameters" element="tns:buscarProvinciaResponse" />
   </message>
   <message name="eliminarProvincia">
     <part name="parameters" element="tns:eliminarProvincia" />
@@ -36,17 +36,17 @@
     <part name="parameters" element="tns:modificarProvinciaResponse" />
   </message>
   <portType name="ServiceProvincia">
-    <operation name="buscarProvincia">
-      <input wsam:Action="http://WebService/ServiceProvincia/buscarProvinciaRequest" message="tns:buscarProvincia" />
-      <output wsam:Action="http://WebService/ServiceProvincia/buscarProvinciaResponse" message="tns:buscarProvinciaResponse" />
+    <operation name="obtenerProvincia">
+      <input wsam:Action="http://WebService/ServiceProvincia/obtenerProvinciaRequest" message="tns:obtenerProvincia" />
+      <output wsam:Action="http://WebService/ServiceProvincia/obtenerProvinciaResponse" message="tns:obtenerProvinciaResponse" />
     </operation>
     <operation name="agregarProvincia">
       <input wsam:Action="http://WebService/ServiceProvincia/agregarProvinciaRequest" message="tns:agregarProvincia" />
       <output wsam:Action="http://WebService/ServiceProvincia/agregarProvinciaResponse" message="tns:agregarProvinciaResponse" />
     </operation>
-    <operation name="obtenerProvincia">
-      <input wsam:Action="http://WebService/ServiceProvincia/obtenerProvinciaRequest" message="tns:obtenerProvincia" />
-      <output wsam:Action="http://WebService/ServiceProvincia/obtenerProvinciaResponse" message="tns:obtenerProvinciaResponse" />
+    <operation name="buscarProvincia">
+      <input wsam:Action="http://WebService/ServiceProvincia/buscarProvinciaRequest" message="tns:buscarProvincia" />
+      <output wsam:Action="http://WebService/ServiceProvincia/buscarProvinciaResponse" message="tns:buscarProvinciaResponse" />
     </operation>
     <operation name="eliminarProvincia">
       <input wsam:Action="http://WebService/ServiceProvincia/eliminarProvinciaRequest" message="tns:eliminarProvincia" />
@@ -59,7 +59,7 @@
   </portType>
   <binding name="ServiceProvinciaPortBinding" type="tns:ServiceProvincia">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="buscarProvincia">
+    <operation name="obtenerProvincia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerProvincia">
+    <operation name="buscarProvincia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

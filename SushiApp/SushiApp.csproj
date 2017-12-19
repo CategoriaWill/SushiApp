@@ -49,6 +49,7 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
@@ -69,6 +70,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Service References\wsEmail2\SushiApp.wsEmail2.EmailBoletaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsEmail2\SushiApp.wsEmail2.EmailConfirmacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsEmail2\wsEmail2.disco" />
+    <None Include="Service References\wsEmail2\configuration91.svcinfo" />
+    <None Include="Service References\wsEmail2\configuration.svcinfo" />
+    <None Include="Service References\wsEmail2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="wsEmail2.asmx" />
     <None Include="packages.config" />
     <Content Include="PaginaAdmin\css\bootstrap.css.map" />
     <Content Include="PaginaAdmin\css\bootstrap.min.css.map" />
@@ -149,13 +164,14 @@
     <Content Include="PaginaAdmin\LESS\top_navigation.less" />
     <Content Include="PaginaAdmin\LESS\typography.less" />
     <Content Include="PaginaAdmin\LESS\variables.less" />
+    <Content Include="PaginaAdmin\mantendor_Administrador.aspx" />
     <Content Include="PaginaAdmin\mantenedor_categoria.aspx" />
-    <Content Include="PaginaAdmin\mantenedor_categoria_editar.aspx" />
     <Content Include="PaginaAdmin\mantenedor_clientes.aspx" />
     <Content Include="PaginaAdmin\mantenedor_ofertas.aspx" />
     <Content Include="PaginaAdmin\mantenedor_productos.aspx" />
     <Content Include="PaginaAdmin\mantenedor_productos_editar.aspx" />
     <Content Include="PaginaAdmin\mantenedor_productos_ver.aspx" />
+    <Content Include="PaginaAdmin\Ofertas-Productos.aspx" />
     <Content Include="PaginaUsuario\Bebidas.aspx" />
     <Content Include="PaginaUsuario\CaliforniaRolls.aspx" />
     <Content Include="PaginaUsuario\Checkout1.aspx" />
@@ -169,6 +185,9 @@
     <Content Include="PaginaUsuario\css\fonts\fontawesome-webfont.woff" />
     <Content Include="PaginaUsuario\css\fonts\FontAwesome.otf" />
     <Content Include="PaginaAdmin\MenuInterior.Master" />
+    <Content Include="PaginaUsuario\img\banner3.jpg" />
+    <Content Include="PaginaUsuario\img\banner5.jpg" />
+    <Content Include="PaginaUsuario\img\ImagenesSushi\banner.jpg" />
     <Content Include="PaginaUsuario\img\ImagenesSushi\ID10_Samurai_Roll.jpg" />
     <Content Include="PaginaUsuario\img\ImagenesSushi\ID11_Ebi_Nikkei.jpg" />
     <Content Include="PaginaUsuario\img\ImagenesSushi\ID12_Cebiche-Roll.jpg" />
@@ -224,6 +243,9 @@
     <Content Include="PaginaUsuario\img\ImagenesSushi\ID7_Tokio_White.jpg" />
     <Content Include="PaginaUsuario\img\ImagenesSushi\ID8_Furai_White.jpg" />
     <Content Include="PaginaUsuario\img\ImagenesSushi\ID9_Tori_Crispy.jpg" />
+    <Content Include="PaginaUsuario\img\suhi900.jpg" />
+    <Content Include="PaginaUsuario\img\sushi10.jpg" />
+    <Content Include="PaginaUsuario\img\sushi9001.png" />
     <Content Include="PaginaUsuario\Inicio.aspx" />
     <Content Include="PaginaUsuario\NikkeiRolls.aspx" />
     <Content Include="PaginaUsuario\Postres.aspx" />
@@ -231,6 +253,8 @@
     <Content Include="PaginaUsuario\SpecialRolls.aspx" />
     <Content Include="PaginaUsuario\TempuraPankoRolls.aspx" />
     <Content Include="PaginaUsuario\VentasSushi.Master" />
+    <None Include="Properties\PublishProfiles\SushiAppPerfil2.pubxml" />
+    <None Include="Properties\PublishProfiles\SushiInternet.pubxml" />
     <None Include="Service References\wsAcceso\ServiceAcceso.wsdl" />
     <None Include="Service References\wsAcceso\ServiceAcceso.xsd">
       <SubType>Designer</SubType>
@@ -381,6 +405,7 @@
     <Content Include="Service References\wsComuna\SushiApp.wsComuna.obtenerComunaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\wsEmail2\wsEmail2.wsdl" />
     <None Include="Service References\wsEstablecimiento\ServiceEstablecimiento.wsdl" />
     <None Include="Service References\wsEstablecimiento\ServiceEstablecimiento.xsd">
       <SubType>Designer</SubType>
@@ -541,10 +566,6 @@
     <Content Include="Service References\wsPerfil\SushiApp.wsPerfil.perfil.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\wsProducto\ServiceProducto.wsdl" />
-    <None Include="Service References\wsProducto\ServiceProducto.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\wsCliente\configuration91.svcinfo" />
     <None Include="Service References\wsCliente\configuration.svcinfo" />
     <None Include="Service References\wsCliente\Reference.svcmap">
@@ -593,6 +614,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\wsProducto\ServiceProducto.wsdl" />
+    <None Include="Service References\wsProducto\ServiceProducto.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Service References\wsProducto\SushiApp.wsProducto.agregarProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -614,6 +639,12 @@
     <None Include="Service References\wsProvincia\ServiceProvincia.wsdl" />
     <None Include="Service References\wsProvincia\ServiceProvincia.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsProducto\configuration91.svcinfo" />
+    <None Include="Service References\wsProducto\configuration.svcinfo" />
+    <None Include="Service References\wsProducto\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Service References\wsProvincia\SushiApp.wsProvincia.agregarProvinciaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -1259,7 +1290,6 @@
     <Content Include="PaginaUsuario\img\apple-touch-icon-72x72.png" />
     <Content Include="PaginaUsuario\img\apple-touch-icon-76x76.png" />
     <Content Include="PaginaUsuario\img\apple-touch-icon.png" />
-    <Content Include="PaginaUsuario\img\banner.jpg" />
     <Content Include="PaginaUsuario\img\banner2.jpg" />
     <Content Include="PaginaUsuario\img\basketsquare.jpg" />
     <Content Include="PaginaUsuario\img\blog-avatar.jpg" />
@@ -1331,7 +1361,6 @@
     <Content Include="PaginaUsuario\img\slide5.jpg" />
     <Content Include="PaginaUsuario\img\slide6.jpg" />
     <Content Include="PaginaUsuario\img\sushi-166574.jpg" />
-    <Content Include="PaginaUsuario\img\sushi1.jpg" />
     <Content Include="PaginaUsuario\img\sushifavicon.png" />
     <Content Include="PaginaUsuario\img\template-easy-code.png" />
     <Content Include="PaginaUsuario\img\template-easy-customize-less.png" />
@@ -1360,12 +1389,6 @@
     <None Include="Service References\wsCategoria\configuration91.svcinfo" />
     <None Include="Service References\wsCategoria\configuration.svcinfo" />
     <None Include="Service References\wsCategoria\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\wsProducto\configuration91.svcinfo" />
-    <None Include="Service References\wsProducto\configuration.svcinfo" />
-    <None Include="Service References\wsProducto\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -1411,6 +1434,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ButtonProducto.cs" />
+    <Compile Include="Models\Carro.cs" />
+    <Compile Include="Models\CarroCollection.cs" />
+    <Compile Include="Models\Email.cs" />
+    <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\ProductoCollection.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="PaginaAdmin\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1418,19 +1448,19 @@
     <Compile Include="PaginaAdmin\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PaginaAdmin\mantendor_Administrador.aspx.cs">
+      <DependentUpon>mantendor_Administrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaAdmin\mantendor_Administrador.aspx.designer.cs">
+      <DependentUpon>mantendor_Administrador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PaginaAdmin\mantenedor_categoria.aspx.cs">
       <DependentUpon>mantenedor_categoria.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PaginaAdmin\mantenedor_categoria.aspx.designer.cs">
       <DependentUpon>mantenedor_categoria.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PaginaAdmin\mantenedor_categoria_editar.aspx.cs">
-      <DependentUpon>mantenedor_categoria_editar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PaginaAdmin\mantenedor_categoria_editar.aspx.designer.cs">
-      <DependentUpon>mantenedor_categoria_editar.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaginaAdmin\mantenedor_clientes.aspx.cs">
       <DependentUpon>mantenedor_clientes.aspx</DependentUpon>
@@ -1473,6 +1503,13 @@
     </Compile>
     <Compile Include="PaginaAdmin\MenuInterior.Master.designer.cs">
       <DependentUpon>MenuInterior.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaAdmin\Ofertas-Productos.aspx.cs">
+      <DependentUpon>Ofertas-Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaAdmin\Ofertas-Productos.aspx.designer.cs">
+      <DependentUpon>Ofertas-Productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaginaUsuario\Bebidas.aspx.cs">
       <DependentUpon>Bebidas.aspx</DependentUpon>
@@ -1603,6 +1640,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\wsEmail2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\wsEstablecimiento\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1673,10 +1715,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="wsEmail2.asmx.cs">
+      <DependentUpon>wsEmail2.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="PaginaAdmin\img\" />
   </ItemGroup>
   <ItemGroup>
@@ -1689,6 +1734,7 @@
     <WCFMetadataStorage Include="Service References\wsCategoria\" />
     <WCFMetadataStorage Include="Service References\wsCliente\" />
     <WCFMetadataStorage Include="Service References\wsComuna\" />
+    <WCFMetadataStorage Include="Service References\wsEmail2\" />
     <WCFMetadataStorage Include="Service References\wsEstablecimiento\" />
     <WCFMetadataStorage Include="Service References\wsOfertaProducto\" />
     <WCFMetadataStorage Include="Service References\wsOferta\" />

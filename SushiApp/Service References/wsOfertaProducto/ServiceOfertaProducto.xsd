@@ -21,6 +21,7 @@
   <xs:complexType name="ofertaProducto">
     <xs:sequence>
       <xs:element name="ofertaId" type="xs:int" />
+      <xs:element name="ofertas_producto_Id" type="xs:int" />
       <xs:element name="productoId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
